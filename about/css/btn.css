@@ -1,0 +1,214 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+*:focus,
+*::before:focus,
+*::after:focus {
+  outline: none;
+}
+*::-webkit-input-placeholder,
+*::before::-webkit-input-placeholder,
+*::after::-webkit-input-placeholder {
+  color: #222;
+}
+*::-moz-placeholder,
+*::before::-moz-placeholder,
+*::after::-moz-placeholder {
+  color: #222;
+}
+
+
+.icons {
+  display: none;
+}
+a {
+outline: none;
+}
+button {
+  border: 0;
+  outline: none;
+}
+button:focus {
+  border: none;
+  outline: 0 !important;
+  outline-style: none;
+}
+
+.btn-container {
+  width: 100%;
+  display: flex;
+  z-index: 1000;
+  bottom: 0;
+  position: absolute;
+  align-items: center;
+  justify-content: center;
+}
+.btn-container .btn {
+  position: relative;
+  width: 50px;
+  margin: 16px;
+  height: 50px;
+  border-radius: 50%;
+  background: #f2f2f2;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px -6px 10px white, 0px 4px 15px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+}
+.btn-container .btn:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: 2;
+}
+.btn-container .btn:active {
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.02);
+}
+.btn-container .btn:active:after {
+  box-shadow: inset 0px -2px 5px white, inset 0px 2px 5px rgba(0, 0, 0, 0.15);
+}
+.btn-container .btn.active.play-pause .icon.pause {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.btn-container .btn.active.play-pause .icon.play {
+  opacity: 0;
+  transform: translate(-50%, 50%);
+}
+.btn-container .btn .icon-container,
+.btn-container .btn a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+.btn-container .btn a {
+  z-index: 10;
+}
+.btn-container .btn .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: inline-block;
+  fill: #868686;
+  height: 1.4rem;
+  vertical-align: middle;
+  width: 1.4rem;
+  transition: all 100ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+.skill {
+       margin-bottom: 35px;
+       position: relative;
+     overflow-x:hidden;
+     
+   }
+   .skill > p {
+     font-size: 18px;
+    margin: 0;
+    color: #333;
+    font-weight: 300;
+    background: #fff;
+   }
+   .skill:before{
+       width: 100%;
+       height: 5px;
+       content: "";
+       display: block;
+       position: absolute;
+       background: #959595;
+       bottom: 0;
+   }
+   .skill-bar {
+       width: 100%;
+       height: 5px;
+       background:#f4392f;
+       display: block;
+       position: relative;
+   }
+
+   /* SKILL 1 */
+   .skill1{
+       width: 90%;
+     
+   }
+   .skill-bar span{
+       position: absolute;
+       border-top: 5px solid #f4392f;
+       top: -30px;
+       padding: 0;
+       font-size: 18px;
+       padding: 3px 0;
+       font-weight: 500;
+   }
+   .skill-bar {
+       position: relative;
+     
+   }
+
+   .skill1 .skill-count1 {
+       right: 0;
+   }
+   /* SKILL 2 */
+   .skill2{
+       width: 95%;
+   }
+
+   .skill2 .skill-count2 {
+       right: 0;
+   }
+   /* SKILL 3 */
+   .skill3{
+       width: 80%;
+   }
+   .skill3 .skill-count3 {
+       right: 0;
+   }
+
+   /* SKILL 4 */
+   .skill4{
+       width: 80%
+   }
+
+   .skill4 .skill-count4 {
+       right: 0;
+   }
+
+   /* SKILL 5 */
+   .skill5{
+       width: 75%;
+   }
+
+   .skill5 .skill-count5 {
+       right: 0;
+   }
+
+   /* SKILL 6 */
+   .skill6{
+       width: 60%
+   }
+
+   .skill6 .skill-count6 {
+       right: 0;
+   }
+   .wrapper{
+        width: 80%;
+        font-family: 'arrows', sans-serif;
+        text-align: left;
+        overflow-y: hidden;
+	      margin:0 auto;
+    }
+    @media only screen and (max-width: 768px) {
+      .wrapper{
+        display: none;
+      }
+
+    }
