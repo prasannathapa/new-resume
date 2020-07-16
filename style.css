@@ -330,6 +330,7 @@ button:focus {
 .support-left {
   position: absolute;
   align-items: center;
+  font-size: 16px;
   font-family: "Montserrat";
   color: white;
   left: 10px;
@@ -472,8 +473,8 @@ button:focus {
  * Toggle button styles
  */
 .toggle-button--tuuli label {
-  height: 50px;
-  line-height: 50px;
+  height: 30px;
+  line-height: 30px;
   transition: all 0.2s;
   border-radius: 2rem; }
   .toggle-button--tuuli label:before, .toggle-button--tuuli label:after {
@@ -482,7 +483,7 @@ button:focus {
     transition: all 0.2s .1s ease-out; }
 
 .toggle-button--tuuli input[type=checkbox] + label {
-  width: 50px;
+  width: 30px;
   background: #FF5335; }
   .toggle-button--tuuli input[type=checkbox] + label:before {
     opacity: 0;
@@ -492,7 +493,7 @@ button:focus {
     transform: translate(0, 0); }
 
 .toggle-button--tuuli input[type=checkbox]:checked ~ label {
-  width: 50px;
+  width: 30px;
   background: #61B136; }
 
 .toggle-button--tuuli input[type=checkbox]:checked ~ .toggle-button__icon:before {
@@ -503,8 +504,8 @@ button:focus {
 
 .toggle-button--tuuli .toggle-button__icon {
   position: absolute;
-  height: 50px;
-  width: 50px;
+  height: 25px;
+  width: 25px;
   top: 0;
   left: 0; }
   .toggle-button--tuuli .toggle-button__icon:before, .toggle-button--tuuli .toggle-button__icon:after {
@@ -513,8 +514,8 @@ button:focus {
     border-radius: 3px;
     background: #fff;
     box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
-    margin-left: -10%;
-    top: 48%; }
+    margin-left: -25%;
+    top: 50%; }
   .toggle-button--tuuli .toggle-button__icon:before {
     transform: rotate(45deg); }
   .toggle-button--tuuli .toggle-button__icon:after {
