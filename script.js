@@ -1,5 +1,9 @@
 console.clear();
-
+window.addEventListener("load",function() {
+    setTimeout(function(){
+        window.scrollTo(0, 1);
+    }, 0);
+});
 const { gsap, imagesLoaded } = window;
 const buttons = {
 	prev: document.querySelector(".btn--left"),
@@ -263,10 +267,10 @@ const waitForImages = () => {
 
 waitForImages();
 var elem = document.documentElement;
-
+var toggle = document.getElementById('toggleButton');
 /* View in fullscreen */
 function openFullscreen() {
-	if( window.innerHeight != screen.height) {
+	if( window.innerHeight != screen.height && toggle.checked) {
 	  if (elem.requestFullscreen) {
 	    elem.requestFullscreen();
 	  } else if (elem.mozRequestFullScreen) { /* Firefox */
@@ -276,6 +280,9 @@ function openFullscreen() {
 	  } else if (elem.msRequestFullscreen) { /* IE/Edge */
 	    elem.msRequestFullscreen();
 	  }
+	}
+	else if(!toggle.checked){
+		closeFullscreen();
 	}
 }
 
