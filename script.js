@@ -276,7 +276,7 @@ function openFullscreen() {
     elem.msRequestFullscreen();
   }
 }
-
+openFullscreen();
 /* Close fullscreen */
 function closeFullscreen() {
   if (document.exitFullscreen) {
