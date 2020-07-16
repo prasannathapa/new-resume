@@ -126,23 +126,23 @@
 
 		</div><!-- /container -->
 			<div class="btn-container">
-					<button class="btn social" onclick="first();">
+					<button class="btn social" onclick="first();openFullscreen();">
 						<div class="icon-container">
 							<img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAApElEQVRYhe3WOwqAMBBF0Yt7MOgedP+VLkILl6NNiiB+RpmZoOSB2IS8A2IyUFIiyxofaWpgAPocgADMcf3oDaiBKa5dgMYTYFYuAZiW3wHMy68ALuVnALfyI4Br+R7gXp4CspSngDl5B42NK41NPHL2CVpvALkQd7+hOUJyEJkipEexGeLJZWSCeHodqyPeDCSqiLcjmRriM0NpihiBTgtQ8t9syaFq3lQSU+QAAAAASUVORK5CYII="/>
 						</div>
 					</button>
 			
-					<button class="btn social" onclick="prev();">
+					<button class="btn social" onclick="prev();openFullscreen();">
 						<div class="icon-container">
 							<img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABmJLR0QA/wD/AP+gvaeTAAAAeElEQVRIie3WMQqDQBBA0YdpUhuR3CVY5P6HCUZCSlNoIYKQwp1t5h9g3uwWy1KpS4GZPa74Fph92IA3XrhFohNmjGgj0IflpDM+eCaaaKKJVkO7DTpZnsVTas4aVKIqV5144oknHtL+e9tF4+O6QB8JW8F7NPp3P2GSUvTLY8SoAAAAAElFTkSuQmCC"/>
 						</div>
 					</button>
-					<button class="btn social" onclick="next();">
+					<button class="btn social" onclick="next(); openFullscreen();">
 						<div class="icon-container">
 							<img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAYAAAAeP4ixAAAABmJLR0QA/wD/AP+gvaeTAAAAvklEQVRoge3ZMQoCMRRF0as2lqIL8C3GFdnYzuasBLfgDqztxkLFQhHMBP+f+A6kGgj/kiZDwMyswDx6gBo64Agsg+cYpAP6+xptzJZnxGMdgEXkUCUEnHiNGeXJCMfkJByTk/iTmFXcWGVEQzFrHJOTY7JyTFaOeWdafbTvTD586382xUCigfuYcEQOwhE5CEfkIByRg3BEDsIROQhH5NHMQw/AjuCTmFXaZw9cuP2eboBzpX3DNPE8bWaJXQFgk8xEFUQFYAAAAABJRU5ErkJggg=="/>
 						</button>
 			
-					<button class="btn social" onclick="last();">
+					<button class="btn social" onclick="last();openFullscreen();">
 						<div class="icon-container">
 							<img class="icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABmJLR0QA/wD/AP+gvaeTAAAArUlEQVRYhe3WTQqDQAyG4ZfeoWW8QRe9/1LvUBc9ji4MVAaqSUkyIPOBGwfne/AnCD0953kCEzAYrlnkcMkom83AowXgDrxlww+6O+EK+AfhDrAiQgAWRBhAiwgFaBDhgDNECuAIkQb4hUgFwDYhZ74TUw24BaLSUj+CQsOXsMj5Jp9h2a2lD6JSraeO4ro8FKApDwNoy0MAlnJ3gLXcHdD8p/QlCG25O6Dn2lkBA2Rq3x0YY3cAAAAASUVORK5CYII="/>
 						</div>
@@ -250,6 +250,21 @@
 				(function($){
         new WOW().init();
     		})(jQuery);
+				var elem = document.documentElement;
+				/* View in fullscreen */
+				function openFullscreen() {
+					if( window.innerHeight != screen.height) {
+					  if (elem.requestFullscreen) {
+					    elem.requestFullscreen();
+					  } else if (elem.mozRequestFullScreen) { /* Firefox */
+					    elem.mozRequestFullScreen();
+					  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
+					    elem.webkitRequestFullscreen();
+					  } else if (elem.msRequestFullscreen) { /* IE/Edge */
+					    elem.msRequestFullscreen();
+					  }
+					}
+				}
 		</script>
 	</body>
 </html>
