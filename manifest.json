@@ -1,14 +1,16 @@
 {
-  "name": "Prasanna Thapa | Resume",
-  "short_name": "Prasanna",
-  "display": "standalone",
-  "start_url": "/",
-  "theme_color": "#673ab6",
-  "background_color": "#111111",
+  "short_name": "Prasanna Thapa",
+  "name": "Prasanna Thapa",
   "icons": [
     {
       "src": "icon.png",
-      "sizes": "192x192",
+      "sizes": "188x188",
       "type": "image/png"
-    }
-  ]
+    },
+  ],
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "orientation": "landscape"
+}
